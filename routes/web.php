@@ -32,6 +32,7 @@ Route::get('/auth/google/callback', [GoogleController::class, 'store']);
 
 Route::middleware('auth')->group(function () {
     Route::resource('profile', ProfileController::class);
+ 
     
 });
 
