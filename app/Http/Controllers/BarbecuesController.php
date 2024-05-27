@@ -24,6 +24,12 @@ class BarbecuesController extends Controller
         return Inertia::render('Barbecues/Index');
     }
 
+    public function getallbarbecues()
+    {
+        $barbecues = Barbecue::all();
+        return response()->json($barbecues);
+    }
+
     public function apiIndex(Request $request)
     {
         $limit = $request->input('limit');
