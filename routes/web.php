@@ -74,4 +74,5 @@ Route::middleware('auth')->group(function () {
     Route::post('/review', [BarbecuesController::class, 'review'])->name('review');
 });
 
+Route::get('/api/getallbarbecues', [BarbecuesController::class, 'getallbarbecues']);
 require __DIR__ . '/auth.php';
